@@ -83,6 +83,7 @@
       <p class="label">Random Pick</p>
       <div id="winner" class="winner">Jada</div>
       <button id="pickButton" type="button">Try again</button>
+      <button id="ShuButton" type="button">Shu's Button</button>
     </div>
 
     <script>
@@ -98,6 +99,7 @@
 
       const winnerEl = document.getElementById('winner');
       const pickButton = document.getElementById('pickButton');
+
 
       function pickRandomPerson() {
         const randomIndex = Math.floor(Math.random() * people.length);
