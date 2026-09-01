@@ -103,13 +103,25 @@
       const winnerEl = document.getElementById('winner');
       const pickButton = document.getElementById('pickButton');
 
+      function generateRandomHexColor() {
+        return '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+      }
 
       function pickRandomPerson() {
         const randomIndex = Math.floor(Math.random() * people.length);
         winnerEl.textContent = people[randomIndex];
+       
+      }
+
+      function randomColorBg() {
+        const randomColor = generateRandomHexColor();
+        document.body.style.background = randomColor;
+         randomColorBg();
       }
 
       pickButton.addEventListener('click', pickRandomPerson);
+      const ShuButton = document.getElementById('ShuButton');
+      ShuButton.addEventListener('click', randomColorBg);
 
       pickRandomPerson();
     </script>
